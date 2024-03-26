@@ -9,7 +9,7 @@ class Baner(models.Model):
         max_length=256,
         verbose_name='title'
     )
-    image = models.ImageField( #сделать так что бы отображалось только последнее image
+    image = models.ImageField(
         upload_to='baner_images/',
         verbose_name='image'
     )
