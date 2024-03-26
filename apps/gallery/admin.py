@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.gallery.models import Gallery
+
+
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+    )
