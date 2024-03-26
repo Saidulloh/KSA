@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.our_worth.models import OurWorth
+
+
+@admin.register(OurWorth)
+class OurWorthAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'title',
+    )
